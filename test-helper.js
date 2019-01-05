@@ -1,10 +1,15 @@
 const cache = require('./index.js')
 
-after(async () => {
+afterEach ((callback) => {
   if (cache.client) {
-    try {
-      await cache.client.quit()
-    } catch (error) {
-    }
+    return cache.client.flushdb(callback)
   }
+  return callback()
+})
+
+after((callback) => {
+  if (cache.client) {
+    return cache.client.quit(callback)
+  }
+  return callback()
 })
