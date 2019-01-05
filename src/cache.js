@@ -1,5 +1,6 @@
 const Redis = require('redis')
 const util = require('util')
+const twentyFourHours = 24 * 60 * 60
 
 if (!process.env.CACHE_REDIS_URL) {
   throw new Error('Invalid CACHE_REDIS_URL')
@@ -33,7 +34,7 @@ function set (key, value, callback) {
     if (error) {
       return callback(error)
     }
-    return client.expire(key, 300, (error) => {
+    return client.expire(key, twentyFourHours, (error) => {
       if (error) {
         return callback(error)
       }
