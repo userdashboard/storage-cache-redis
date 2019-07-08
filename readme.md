@@ -2,7 +2,7 @@
 
 Install this module to use Redis as a cache to avoid disk/database operations.
 
-To test this module use [Dashboard](https://github.com/userappstore/dashboard)'s test suite configured with this storage cache.
+To test this module use [Dashboard](https://github.com/userdashboard/dashboard)'s test suite configured with this storage cache.
 
 ## When to use NodeJS caching
 
@@ -14,5 +14,5 @@ You host your web app on a single server and use the hard disk as storage, espec
 
 You have lots of traffic balanced across multiple Dashboard server instances, especially using S3 storage to avoid repetitive file requests.
 
-  STORAGE_CACHE=@userappstore/storage-cache-redis \
+  STORAGE_CACHE=@userdashboard/storage-cache-redis \
   CACHE_REDIS_URL=redis://localhost:6379

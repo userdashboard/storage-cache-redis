@@ -1,6 +1,6 @@
 {
-  "name": "@userappstore/storage-cache-redis",
-  "version": "1.1.0",
+  "name": "@userdashboard/storage-cache-redis",
+  "version": "1.0.0",
   "main": "index.js",
   "description": "Cache storage data in Redis for your Dashboard servers",
   "engine": {
@@ -9,12 +9,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/userappstore/storage-cache-node.git"
+    "url": "git://github.com/userdashboard/storage-cache-node.git"
   },
   "license": "SPDX(MIT OR Unlicense)",
   "scripts": {
     "start": "node main.js",
-    "test": "NODE_ENV=testing mocha node_modules/@userappstore/dashboard/src --recursive --timeout 480000 --slow 480000"
+    "test": "NODE_ENV=testing mocha node_modules/@userdashboard/dashboard/src --recursive --timeout 480000 --slow 480000"
   },
   "dependencies": {
     "redis": "^2.8.0"
