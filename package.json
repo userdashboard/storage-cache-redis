@@ -12,10 +12,6 @@
     "url": "git://github.com/userdashboard/storage-cache-node.git"
   },
   "license": "SPDX(MIT OR Unlicense)",
-  "scripts": {
-    "start": "node main.js",
-    "test": "NODE_ENV=testing mocha node_modules/@userdashboard/dashboard/src --recursive --timeout 480000 --slow 480000"
-  },
   "dependencies": {
     "redis": "^2.8.0"
   }
