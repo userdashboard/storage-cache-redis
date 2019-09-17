@@ -1,6 +1,7 @@
+/* eslint-env mocha */
 const cache = require('./index.js')
 
-afterEach ((callback) => {
+afterEach((callback) => {
   if (cache.client) {
     return cache.client.flushdb(callback)
   }
