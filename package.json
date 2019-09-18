@@ -11,7 +11,7 @@
     "type": "git",
     "url": "git://github.com/userdashboard/storage-cache-node.git"
   },
-  "license": "SPDX(MIT OR Unlicense)",
+  "license": "MIT",
   "dependencies": {
     "redis": "^2.8.0"
   }
