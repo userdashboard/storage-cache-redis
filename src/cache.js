@@ -33,9 +33,6 @@ function get (key, callback) {
     if (!result) {
       return callback()
     }
-    if (result.length && result.startsWith('{')) {
-      return callback(null, JSON.parse(result))
-    }
     try {
       const float = parseFloat(result, 10)
       if (float.toString() === result) {
@@ -55,15 +52,7 @@ function get (key, callback) {
 }
 
 function set (key, value, callback) {
-  let stringified
-  if (value < 0 || value >= 0) {
-    stringified = value
-  } else if (value.length) {
-    stringified = value
-  } else if (Object.keys(value).length) {
-    stringified = JSON.stringify(value)
-  }
-  return client.set(key, stringified, (error) => {
+  return client.set(key, value, (error) => {
     if (error) {
       return callback(error)
     }
