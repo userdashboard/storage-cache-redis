@@ -1,0 +1,57 @@
+name: test-and-publish
+
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [12.x]
+    steps:
+    - uses: actions/checkout@v1
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v1
+      with:
+        node-version: ${{ matrix.node-version }}
+    - name: Setup Redis
+      run: sudo apt-get install -y redis-server
+    - name: Setup dependencies
+      run: |
+        git clone https://github.com/userdashboard/dashboard.git /tmp/instance
+        cd /tmp/instance
+        npm install redis mocha puppeteer@2.1.1 --no-save
+    - name: Fake-install module
+      run: |
+        mkdir -p /tmp/instance/node_modules/@userdashboard/storage-cache-redis
+        cp index.js /tmp/instance/node_modules/@userdashboard/storage-cache-redis
+        cp -R src /tmp/instance/node_modules/@userdashboard/storage-cache-redis
+    - name: Test without encryption
+      run: cd /tmp/instance && npm test
+      env:
+        NODE_ENV: "testing"
+        FAST_START: "true"
+        DASHBOARD_SERVER: http://localhost:9000
+        DOMAIN: "localhost"
+        STORAGE_CACHE: "@userdashboard/storage-cache-redis"
+        CACHE_REDIS_URL: "redis://localhost:6379/15"
+        GENERATE_SITEMAP_TXT: "false"
+        GENERATE_API_TXT: "false"
+    - name: Test with encryption
+      run: cd /tmp/instance && npm test
+      env:
+        NODE_ENV: "testing"
+        FAST_START: "true"
+        DASHBOARD_SERVER: "http://localhost:9000"
+        DOMAIN: "localhost"
+        STORAGE_CACHE: "@userdashboard/storage-cache-redis"
+        CACHE_REDIS_URL: "redis://localhost:6379/15"
+        GENERATE_SITEMAP_TXT: "false"
+        GENERATE_API_TXT: "false"
+        ENCRYPTION_SECRET: "12345678901234567890123456789012"
+        ENCRYPTION_SECRET_IV: "1234123412341234"
+    - name: Publish to NPM
+      uses: JS-DevTools/npm-publish@v1
+      with:
+        token: ${{ secrets.NPM_TOKEN }}
+        
