@@ -26,11 +26,44 @@ module.exports = {
 }
 
 function get (key, callback) {
-  return client.get(key, callback)
+  return client.get(key, (error, result) => {
+    if (error) {
+      return callback(error)
+    }
+    if (!result) {
+      return callback()
+    }
+    if (result.length && result.startsWith('{')) {
+      return callback(null, JSON.parse(result))
+    }
+    try {
+      const float = parseFloat(result, 10)
+      if (float.toString() === result) {
+        return callback(null, float)
+      }
+    } catch (error) {
+    }
+    try {
+      const int = parseInt(result, 10)
+      if (int.toString() === result) {
+        return callback(null, int)
+      }
+    } catch (error) {
+    }
+    return callback(null, result)
+  })
 }
 
 function set (key, value, callback) {
-  return client.set(key, value, (error) => {
+  let stringified
+  if (value < 0 || value >= 0) {
+    stringified = value
+  } else if (value.length) {
+    stringified = value
+  } else if (Object.keys(value).length) {
+    stringified = JSON.stringify(value)
+  }
+  return client.set(key, stringified, (error) => {
     if (error) {
       return callback(error)
     }
