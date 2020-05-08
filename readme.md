@@ -9,13 +9,13 @@ To test this module use [Dashboard](https://github.com/userdashboard/dashboard)'
 
 You host your web app on a single server and use the hard disk as storage, especially spinning disks to avoid repetetive file reads.
 
-  STORAGE_CACHE=node
+  CACHE=node
 
 ## When to use Redis caching
 
 You have lots of traffic balanced across multiple Dashboard server instances, especially using S3 storage to avoid repetitive file requests.
 
-  STORAGE_CACHE=@userdashboard/storage-cache-redis \
+  CACHE=@userdashboard/storage-cache-redis \
   CACHE_REDIS_URL=redis://localhost:6379
 
 # Dashboard
