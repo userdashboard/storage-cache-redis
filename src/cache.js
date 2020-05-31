@@ -1,4 +1,4 @@
-const Log = require('@userdashboard/src/log.js')('storage-redis-cache')
+const Log = require('@userdashboard/dashboard/src/log.js')('storage-redis-cache')
 const Redis = require('redis')
 const util = require('util')
 const twentyFourHours = 24 * 60 * 60
