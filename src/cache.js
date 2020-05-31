@@ -1,4 +1,3 @@
-const Log = require('@userdashboard/dashboard/src/log.js')('storage-redis-cache')
 const Redis = require('redis')
 const util = require('util')
 const twentyFourHours = 24 * 60 * 60
@@ -9,8 +8,7 @@ if (!process.env.CACHE_REDIS_URL) {
 
 let client = Redis.createClient(process.env.CACHE_REDIS_URL)
 client.on('error', (error) => {
-  Log.error('redis cache error', error)
-  process.exit(1)
+  throw error
 })
 
 client.on('end', () => {
