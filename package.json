@@ -1,6 +1,6 @@
 {
   "name": "@userdashboard/storage-cache-redis",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "main": "index.js",
   "description": "Cache storage data in Redis for your Dashboard servers",
   "engine": {
