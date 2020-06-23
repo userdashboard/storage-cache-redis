@@ -1,4 +1,6 @@
 /* eslint-env mocha */
+global.applicationPath = __dirname
+
 const cache = require('./index.js')
 
 afterEach((callback) => {
