@@ -44,7 +44,7 @@ jobs:
         DASHBOARD_SERVER: "http://localhost:9000"
         DOMAIN: "localhost"
         CACHE: "@userdashboard/storage-cache-redis"
-        CACHE_REDIS_URL: "redis://localhost:6379/15"
+        CACHE_REDIS_URL: "redis://localhost:6379"
         STORAGE: "@userdashboard/storage-mongodb"
         MONGODB_URL: "mongodb://localhost:27017"
         GENERATE_SITEMAP_TXT: false
