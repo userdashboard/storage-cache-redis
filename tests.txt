@@ -1,6 +1,6 @@
 
 
-setupBefore /home/runner/work/storage-cache-redis/storage-cache-redis /home/runner/work/storage-cache-redis/storage-cache-redis/node_modules/@userdashboard/dashboard/src/log.js
+getting collection
   index
     PAGE_SIZE
       Rows of data per page
@@ -179,15 +179,15 @@ setupBefore /home/runner/work/storage-cache-redis/storage-cache-redis /home/runn
 
   internal-api/proxy
     Proxy#pass
-      ✓ should include x-accountid header (148ms)
-      ✓ should include x-sessionid header (39ms)
-      ✓ should include x-dashboard-server header (38ms)
-      ✓ should create x-application-server-token header (38ms)
+      ✓ should include x-accountid header (59ms)
+      ✓ should include x-sessionid header (38ms)
+      ✓ should include x-dashboard-server header (42ms)
+      ✓ should create x-application-server-token header (41ms)
       ✓ should include referer header
-      ✓ should send POST data
-      ✓ should send multipart POST data
-      ✓ should send file upload POST data (38ms)
-      ✓ should execute proxy handlers
+      ✓ should send POST data (49ms)
+      ✓ should send multipart POST data (41ms)
+      ✓ should send file upload POST data (44ms)
+      ✓ should execute proxy handlers (41ms)
 
   internal-api/response
     Response#wrapTemplateWithSrcDoc (global setting)
@@ -196,9 +196,9 @@ setupBefore /home/runner/work/storage-cache-redis/storage-cache-redis /home/runn
       ✓ should transfer navigation to template from page
       ✓ should transfer title to page from template
       ✓ should remove menus for guests
-      ✓ should disable administrator menu for normal user (38ms)
-      ✓ should add account menu links from package.json (41ms)
-      ✓ should add administrator menu links from package.json (46ms)
+      ✓ should disable administrator menu for normal user
+      ✓ should add account menu links from package.json (46ms)
+      ✓ should add administrator menu links from package.json (42ms)
     Response#wrapTemplateWithSrcDoc (config override)
       ✓ should transfer head content from page to template
       ✓ should transfer head content from template to page
@@ -206,7 +206,7 @@ setupBefore /home/runner/work/storage-cache-redis/storage-cache-redis /home/runn
       ✓ should transfer title to page from template
       ✓ should remove menus for guests
       ✓ should disable administrator menu for normal user
-      ✓ should add account menu links from package.json
+      ✓ should add account menu links from package.json (45ms)
       ✓ should add administrator menu links from package.json
       ✓ should execute "page" handlers on the rendered page
       ✓ should execute "template" handlers on the rendered + page-merged template
@@ -228,7 +228,7 @@ setupBefore /home/runner/work/storage-cache-redis/storage-cache-redis /home/runn
     Server#authenticateRequest
       ✓ should reject missing token
       ✓ should reject invalid token
-      ✓ should identify user from token (51ms)
+      ✓ should identify user from token (42ms)
     Server#parsePostData
       ✓ should ignore file uploads
       ✓ should ignore no-content uploads
@@ -238,15 +238,15 @@ setupBefore /home/runner/work/storage-cache-redis/storage-cache-redis /home/runn
       ✓ should not bind route for unknown url
       ✓ should bind route to req
       ✓ should redirect user to verification (41ms)
-      ✓ should execute "before" server handler before identifying user
-      ✓ should execute "after" server handler after identifying user
+      ✓ should execute "before" server handler before identifying user (41ms)
+      ✓ should execute "after" server handler after identifying user (39ms)
       ✓ should execute "after" server handler after identifying guest
       ✓ should execute "before" and "after" server handler
       ✓ should execute each server handler
 
   internal-api/sitemap
     Sitemap#authenticateRequest
-      ✓ should substitute language HTML file (39ms)
+      ✓ should substitute language HTML file (43ms)
 
   internal-api/storage-cache
     get
@@ -260,6 +260,7 @@ setupBefore /home/runner/work/storage-cache-redis/storage-cache-redis /home/runn
       ✓ should remove object
 
   internal-api/storage-list
+getting collection
     StorageList#add
       ✓ should add string properties
       ✓ should add int properties
@@ -269,17 +270,18 @@ setupBefore /home/runner/work/storage-cache-redis/storage-cache-redis /home/runn
       ✓ should add multiple properties
       ✓ should skip duplicates
     StorageList#count
-      ✓ should count the items (3609ms)
-      ✓ should not count removed items (4810ms)
+      ✓ should count the items (3607ms)
+      ✓ should not count removed items (4811ms)
     StorageList#remove
       ✓ should remove the item (2405ms)
     StorageList#list
-      ✓ should change page size (4809ms)
-      ✓ should enforce offset (3608ms)
+      ✓ should change page size (4811ms)
+      ✓ should enforce offset (3610ms)
     StorageList#listAll
-      ✓ should return all records (7218ms)
+      ✓ should return all records (7219ms)
 
   internal-api/storage-object
+getting collection
     getProperties
       ✓ should return string properties
       ✓ should return int properties
@@ -306,6 +308,7 @@ setupBefore /home/runner/work/storage-cache-redis/storage-cache-redis /home/runn
       ✓ should set boolean properties
 
   internal-api/storage
+getting collection
     Storage#read
       ✓ should require file
       ✓ should return file contents
@@ -337,191 +340,191 @@ setupBefore /home/runner/work/storage-cache-redis/storage-cache-redis /home/runn
 
   /account/change-password
     view
-      ✓ should present the form (2339ms)
+      ✓ should present the form (1287ms)
     submit
-      ✓ should apply new password (screenshots) (3348ms)
+      ✓ should apply new password (screenshots) (3258ms)
     errors
-      ✓ invalid-new-password (1816ms)
-      ✓ invalid-new-password-length (2117ms)
-      ✓ invalid-confirm-password (1935ms)
-      ✓ invalid-password (1650ms)
+      ✓ invalid-new-password (1727ms)
+      ✓ invalid-new-password-length (2030ms)
+      ✓ invalid-confirm-password (1899ms)
+      ✓ invalid-password (1602ms)
 
   /account/change-username
     view
-      ✓ should present the form (573ms)
+      ✓ should present the form (525ms)
     submit
-      ✓ should apply new username (screenshots) (3495ms)
+      ✓ should apply new username (screenshots) (3356ms)
     errors
-      ✓ invalid-new-username (1484ms)
-      ✓ invalid-new-username-length (1514ms)
-      ✓ invalid-password (1813ms)
+      ✓ invalid-new-username (1398ms)
+      ✓ invalid-new-username-length (1448ms)
+      ✓ invalid-password (1790ms)
 
   /account/create-profile
     view
-      ✓ should present the form (538ms)
-      ✓ should have elements for full-name (538ms)
-      ✓ should have elements for contact-email (571ms)
-      ✓ should have elements for display-email (547ms)
-      ✓ should have elements for dob (522ms)
-      ✓ should have elements for phone (544ms)
-      ✓ should have elements for occupation (571ms)
-      ✓ should have elements for location (546ms)
-      ✓ should have elements for company-name (551ms)
-      ✓ should have elements for website (594ms)
+      ✓ should present the form (522ms)
+      ✓ should have elements for full-name (508ms)
+      ✓ should have elements for contact-email (538ms)
+      ✓ should have elements for display-email (526ms)
+      ✓ should have elements for dob (521ms)
+      ✓ should have elements for phone (513ms)
+      ✓ should have elements for occupation (509ms)
+      ✓ should have elements for location (506ms)
+      ✓ should have elements for company-name (504ms)
+      ✓ should have elements for website (526ms)
     submit
-      ✓ should create profile (screenshots) (4382ms)
-      ✓ should create profile with full-name (1352ms)
-      ✓ should create profile and set default (1412ms)
-      ✓ should create profile with display name (1234ms)
-      ✓ should create profile with contact-email (1577ms)
-      ✓ should create profile with display-email (1502ms)
-      ✓ should create profile with dob in YYYY-MM-DD (1281ms)
-      ✓ should create profile with dob in MM-DD-YYYY (1254ms)
-      ✓ should create profile with phone (1722ms)
-      ✓ should create profile with occupation (1713ms)
-      ✓ should create profile with location (1802ms)
-      ✓ should create profile with company-name (1698ms)
-      ✓ should create profile with website (1707ms)
+      ✓ should create profile (screenshots) (4286ms)
+      ✓ should create profile with full-name (1323ms)
+      ✓ should create profile and set default (1368ms)
+      ✓ should create profile with display name (1187ms)
+      ✓ should create profile with contact-email (1728ms)
+      ✓ should create profile with display-email (1486ms)
+      ✓ should create profile with dob in YYYY-MM-DD (1226ms)
+      ✓ should create profile with dob in MM-DD-YYYY (1249ms)
+      ✓ should create profile with phone (1699ms)
+      ✓ should create profile with occupation (1706ms)
+      ✓ should create profile with location (1668ms)
+      ✓ should create profile with company-name (1706ms)
+      ✓ should create profile with website (1670ms)
     errors
-      ✓ invalid-first-name (1036ms)
-      ✓ invalid-first-name-length (2365ms)
-      ✓ invalid-last-name (1058ms)
-      ✓ invalid-last-name-length (2385ms)
-      ✓ invalid-contact-email (1949ms)
-      ✓ invalid-display-email (1990ms)
-      ✓ invalid-display-name (881ms)
-      ✓ invalid-display-name-length (1994ms)
-      ✓ invalid-dob (2021ms)
-      ✓ invalid-phone (904ms)
-      ✓ invalid-occupation (898ms)
-      ✓ invalid-location (873ms)
-      ✓ invalid-company-name (904ms)
-      ✓ invalid-website (896ms)
+      ✓ invalid-first-name (1016ms)
+      ✓ invalid-first-name-length (2276ms)
+      ✓ invalid-last-name (1030ms)
+      ✓ invalid-last-name-length (2261ms)
+      ✓ invalid-contact-email (1915ms)
+      ✓ invalid-display-email (1827ms)
+      ✓ invalid-display-name (837ms)
+      ✓ invalid-display-name-length (1896ms)
+      ✓ invalid-dob (1927ms)
+      ✓ invalid-phone (906ms)
+      ✓ invalid-occupation (870ms)
+      ✓ invalid-location (898ms)
+      ✓ invalid-company-name (861ms)
+      ✓ invalid-website (864ms)
 
   /account/create-reset-code
     view
-      ✓ should present the form (539ms)
+      ✓ should present the form (493ms)
     submit
-      ✓ should create reset code (screenshots) (2580ms)
+      ✓ should create reset code (screenshots) (2543ms)
     errors
-      ✓ invalid-secret-code (979ms)
-      ✓ invalid-secret-code-length (1972ms)
+      ✓ invalid-secret-code (886ms)
+      ✓ invalid-secret-code-length (1896ms)
 
   /account/delete-account-complete
     view
-      ✓ should present 3 days remaining message (1471ms)
-      ✓ should present 7 days remaining message (1458ms)
-      ✓ should present instant deletion message (1490ms)
-      ✓ should present instant delete message (screenshots) (2479ms)
+      ✓ should present 3 days remaining message (1468ms)
+      ✓ should present 7 days remaining message (1475ms)
+      ✓ should present instant deletion message (1477ms)
+      ✓ should present instant delete message (screenshots) (2560ms)
 
   /account/delete-account
     view
-      ✓ should present the form (563ms)
+      ✓ should present the form (528ms)
     submit
-      ✓ should mark account deleted (screenshots) (2411ms)
+      ✓ should mark account deleted (screenshots) (2544ms)
     errors
-      ✓ invalid-password (1081ms)
+      ✓ invalid-password (1052ms)
 
   /account/delete-profile
     before
-      ✓ should bind data (40ms)
+      ✓ should bind data (44ms)
     exceptions
       ✓ invalid-profileid
       ✓ invalid-profile
-      ✓ invalid-account (95ms)
+      ✓ invalid-account (90ms)
     view
-      ✓ should present the form (575ms)
+      ✓ should present the form (500ms)
     submit
-      ✓ should delete profile (screenshots) (3714ms)
+      ✓ should delete profile (screenshots) (3664ms)
 
   /account/delete-reset-code
     before
-      ✓ should bind data (39ms)
+      ✓ should bind data (43ms)
     exceptions
       ✓ invalid-reset-codeid
-      ✓ invalid-account (64ms)
+      ✓ invalid-account (67ms)
     view
-      ✓ should present the form (557ms)
+      ✓ should present the form (514ms)
     submit
-      ✓ should delete reset code (screenshots) (3058ms)
+      ✓ should delete reset code (screenshots) (2980ms)
 
   /account/edit-profile
     view
-      ✓ should present the form (520ms)
-      ✓ should have elements for full-name (545ms)
-      ✓ should have elements for display-name (577ms)
-      ✓ should have elements for contact-email (553ms)
-      ✓ should have elements for display-email (549ms)
-      ✓ should have elements for dob (522ms)
-      ✓ should have elements for phone (545ms)
-      ✓ should have elements for occupation (551ms)
-      ✓ should have elements for location (539ms)
-      ✓ should have elements for company-name (537ms)
-      ✓ should have elements for website (567ms)
+      ✓ should present the form (523ms)
+      ✓ should have elements for full-name (536ms)
+      ✓ should have elements for display-name (546ms)
+      ✓ should have elements for contact-email (512ms)
+      ✓ should have elements for display-email (548ms)
+      ✓ should have elements for dob (529ms)
+      ✓ should have elements for phone (584ms)
+      ✓ should have elements for occupation (528ms)
+      ✓ should have elements for location (543ms)
+      ✓ should have elements for company-name (547ms)
+      ✓ should have elements for website (534ms)
     submit
-      ✓ should update profile (screenshots) (7095ms)
-      ✓ should update profile with full-name (1385ms)
-      ✓ should update profile with display name (1211ms)
-      ✓ should update profile with contact-email (1611ms)
-      ✓ should update profile with display-email (1474ms)
-      ✓ should update profile with dob in YYYY-MM-DD (1260ms)
-      ✓ should update profile with dob in MM-DD-YYYY (1268ms)
-      ✓ should update profile with phone (1750ms)
-      ✓ should update profile with occupation (1726ms)
-      ✓ should update profile with location (1695ms)
-      ✓ should update profile with company-name (1762ms)
-      ✓ should update profile with website (1717ms)
+      ✓ should update profile (screenshots) (6870ms)
+      ✓ should update profile with full-name (1306ms)
+      ✓ should update profile with display name (1233ms)
+      ✓ should update profile with contact-email (1389ms)
+      ✓ should update profile with display-email (1606ms)
+      ✓ should update profile with dob in YYYY-MM-DD (1258ms)
+      ✓ should update profile with dob in MM-DD-YYYY (1231ms)
+      ✓ should update profile with phone (1684ms)
+      ✓ should update profile with occupation (1664ms)
+      ✓ should update profile with location (1700ms)
+      ✓ should update profile with company-name (1674ms)
+      ✓ should update profile with website (1700ms)
     errors
-      ✓ invalid-first-name (1031ms)
-      ✓ invalid-first-name-length (2364ms)
-      ✓ invalid-last-name (1054ms)
-      ✓ invalid-last-name-length (2389ms)
-      ✓ invalid-contact-email (1959ms)
-      ✓ invalid-display-email (1954ms)
-      ✓ invalid-display-name (900ms)
-      ✓ invalid-display-name-length (2040ms)
-      ✓ invalid-dob (2060ms)
-      ✓ invalid-phone (909ms)
-      ✓ invalid-occupation (884ms)
-      ✓ invalid-location (933ms)
-      ✓ invalid-company-name (948ms)
-      ✓ invalid-website (918ms)
+      ✓ invalid-first-name (1029ms)
+      ✓ invalid-first-name-length (2274ms)
+      ✓ invalid-last-name (998ms)
+      ✓ invalid-last-name-length (2272ms)
+      ✓ invalid-contact-email (1900ms)
+      ✓ invalid-display-email (1828ms)
+      ✓ invalid-display-name (849ms)
+      ✓ invalid-display-name-length (1904ms)
+      ✓ invalid-dob (2024ms)
+      ✓ invalid-phone (882ms)
+      ✓ invalid-occupation (900ms)
+      ✓ invalid-location (868ms)
+      ✓ invalid-company-name (874ms)
+      ✓ invalid-website (875ms)
 
   /account/end-all-sessions
     view
-      ✓ should present the form (537ms)
+      ✓ should present the form (499ms)
     submit
-      ✓ should generate a new session key (screenshots) (1893ms)
+      ✓ should generate a new session key (screenshots) (1913ms)
 
   /account/end-session
     before
       ✓ should bind data to req
     view
-      ✓ should present the form (513ms)
+      ✓ should present the form (504ms)
     submit
-      ✓ should end the session (screenshots) (3111ms)
-      ✓ should end current session (789ms)
+      ✓ should end the session (screenshots) (3002ms)
+      ✓ should end current session (786ms)
 
   /account
     view
-      ✓ should return page (screenshots) (1336ms)
-      ✓ should not link to account preferences (1309ms)
-      ✓ should link to account preferences (1351ms)
+      ✓ should return page (screenshots) (1305ms)
+      ✓ should not link to account preferences (1250ms)
+      ✓ should link to account preferences (1298ms)
 
   /account/language
     exceptions
       ✓ should require language enabled
     view
-      ✓ should present the form (851ms)
+      ✓ should present the form (707ms)
     submit
-      ✓ should change the language (screenshots) (2264ms)
+      ✓ should change the language (screenshots) (2293ms)
 
   /account/profile
     before
       ✓ should bind data to req
     view
-      ✓ should present the profile table (screenshots) (2455ms)
-      ✓ should show fields if data exists (4838ms)
+      ✓ should present the profile table (screenshots) (2390ms)
+      ✓ should show fields if data exists (4507ms)
 
   /account/profiles
     before
@@ -530,76 +533,76 @@ setupBefore /home/runner/work/storage-cache-redis/storage-cache-redis /home/runn
       ✓ should return one page (screenshots)
       ✓ should change page size
       ✓ should change offset
-      ✓ should show fields if data exists (4823ms)
+      ✓ should show fields if data exists (4553ms)
 
   /account/register
     view
-      ✓ should present the form (432ms)
-      ✓ should disable the form (428ms)
-      ✓ should have elements for full-name (420ms)
-      ✓ should have elements for contact-email (638ms)
-      ✓ should have elements for display-email (428ms)
-      ✓ should have elements for dob (516ms)
-      ✓ should have elements for phone (638ms)
-      ✓ should have elements for occupation (441ms)
-      ✓ should have elements for location (431ms)
-      ✓ should have elements for company-name (439ms)
-      ✓ should have elements for website (445ms)
+      ✓ should present the form (376ms)
+      ✓ should disable the form (415ms)
+      ✓ should have elements for full-name (400ms)
+      ✓ should have elements for contact-email (404ms)
+      ✓ should have elements for display-email (406ms)
+      ✓ should have elements for dob (393ms)
+      ✓ should have elements for phone (393ms)
+      ✓ should have elements for occupation (386ms)
+      ✓ should have elements for location (392ms)
+      ✓ should have elements for company-name (407ms)
+      ✓ should have elements for website (391ms)
     submit
-      ✓ should create new account with full name (6661ms)
-      ✓ should create new profile with contact email (6841ms)
-      ✓ should create new profile with display email (6906ms)
-      ✓ should create new profile with display name (6476ms)
-      ✓ should create new profile with dob in YYYY-MM-DD (6610ms)
-      ✓ should create new profile with dob in MM-DD-YYYY (6572ms)
-      ✓ should create new profile with phone (7046ms)
-      ✓ should create new profile with occupation (7100ms)
-      ✓ should create new profile with location (7112ms)
-      ✓ should create new profile with company-name (7071ms)
-      ✓ should create new profile with website (7111ms)
-      ✓ should create 20-minute session (6318ms)
-      ✓ should create account (screenshots) (8581ms)
+      ✓ should create new account with full name (6543ms)
+      ✓ should create new profile with contact email (6764ms)
+      ✓ should create new profile with display email (6791ms)
+      ✓ should create new profile with display name (6353ms)
+      ✓ should create new profile with dob in YYYY-MM-DD (6499ms)
+      ✓ should create new profile with dob in MM-DD-YYYY (6502ms)
+      ✓ should create new profile with phone (6923ms)
+      ✓ should create new profile with occupation (6951ms)
+      ✓ should create new profile with location (6926ms)
+      ✓ should create new profile with company-name (6915ms)
+      ✓ should create new profile with website (6966ms)
+      ✓ should create 20-minute session (6267ms)
+      ✓ should create account (screenshots) (8489ms)
     errors
-      ✓ invalid-username (5498ms)
-      ✓ invalid-username-length (5542ms)
-      ✓ invalid-password (5500ms)
-      ✓ invalid-password-length (5265ms)
-      ✓ invalid-confirm (5645ms)
-      ✓ invalid-first-name (6377ms)
-      ✓ invalid-first-name-length (13010ms)
-      ✓ invalid-last-name (6373ms)
-      ✓ invalid-last-name-length (12995ms)
-      ✓ invalid-contact-email (12613ms)
-      ✓ invalid-display-email (12588ms)
-      ✓ invalid-display-name (6275ms)
-      ✓ invalid-display-name-length (12737ms)
-      ✓ invalid-dob (12795ms)
-      ✓ invalid-phone (6308ms)
-      ✓ invalid-occupation (6208ms)
-      ✓ invalid-location (6248ms)
-      ✓ invalid-company-name (6202ms)
-      ✓ invalid-website (6235ms)
+      ✓ invalid-username (5400ms)
+      ✓ invalid-username-length (5437ms)
+      ✓ invalid-password (5417ms)
+      ✓ invalid-password-length (5209ms)
+      ✓ invalid-confirm (5536ms)
+      ✓ invalid-first-name (6254ms)
+      ✓ invalid-first-name-length (12819ms)
+      ✓ invalid-last-name (6280ms)
+      ✓ invalid-last-name-length (12793ms)
+      ✓ invalid-contact-email (12373ms)
+      ✓ invalid-display-email (12382ms)
+      ✓ invalid-display-name (6106ms)
+      ✓ invalid-display-name-length (12479ms)
+      ✓ invalid-dob (12556ms)
+      ✓ invalid-phone (6083ms)
+      ✓ invalid-occupation (6112ms)
+      ✓ invalid-location (6102ms)
+      ✓ invalid-company-name (6098ms)
+      ✓ invalid-website (6141ms)
 
   /account/reset-account
     view
-      ✓ should present the form (449ms)
+      ✓ should present the form (384ms)
     submit
-      ✓ should reset session key (6993ms)
-      ✓ should reset code last used (6988ms)
-      ✓ should sign in (screenshots) (11509ms)
+      ✓ should reset session key (6903ms)
+      ✓ should reset code last used (6869ms)
+      ✓ should sign in (screenshots) (11385ms)
     errors
-      ✓ invalid-username (5790ms)
-      ✓ invalid-secret-code (5733ms)
-      ✓ invalid-new-password (5713ms)
-      ✓ invalid-new-password-length (5482ms)
-      ✓ invalid-confirm-password (5864ms)
-      ✓ invalid-account (6786ms)
+      ✓ invalid-username (5679ms)
+      ✓ invalid-secret-code (5647ms)
+      ✓ invalid-new-password (5593ms)
+      ✓ invalid-new-password-length (5401ms)
+      ✓ invalid-confirm-password (5605ms)
+      ✓ invalid-account (6751ms)
 
   /account/reset-code
     before
-      ✓ should bind data to req (39ms)
+      ✓ should bind data to req (44ms)
     view
-      ✓ should present the reset code table (screenshots) (2111ms)
+      ✓ should present the reset code table (screenshots) (1847ms)
 
   /account/reset-codes
     before
@@ -611,24 +614,24 @@ setupBefore /home/runner/work/storage-cache-redis/storage-cache-redis /home/runn
 
   /account/restore-account
     view
-      ✓ should present the form (552ms)
+      ✓ should present the form (463ms)
     submit
-      ✓ should unset account deleted (screenshots) (10616ms)
+      ✓ should unset account deleted (screenshots) (10578ms)
     errors
-      ✓ invalid-username (5382ms)
-      ✓ invalid-password (5383ms)
-      ✓ invalid-account (5905ms)
+      ✓ invalid-username (5349ms)
+      ✓ invalid-password (5338ms)
+      ✓ invalid-account (5797ms)
 
   /account/session
     before
       ✓ should bind data to req
     view
-      ✓ should present the session table (screenshots) (1919ms)
+      ✓ should present the session table (screenshots) (1868ms)
 
   /account/sessions
     before
       ✓ should bind data to req
-      ✓ should exclude ended sessions (617ms)
+      ✓ should exclude ended sessions (578ms)
     view
       ✓ should return one page (screenshots)
       ✓ should change page size
@@ -636,44 +639,44 @@ setupBefore /home/runner/work/storage-cache-redis/storage-cache-redis /home/runn
 
   /account/set-default-profile
     before
-      ✓ should bind data to req (46ms)
+      ✓ should bind data to req (49ms)
     view
-      ✓ should present the form (557ms)
+      ✓ should present the form (521ms)
     submit
-      ✓ should set the profile as default (screenshots) (3728ms)
+      ✓ should set the profile as default (screenshots) (3709ms)
 
   /account/signin
     view
-      ✓ should present the form (556ms)
+      ✓ should present the form (395ms)
     submit
-      ✓ should create session expiring in 20 minutes as default (5987ms)
-      ✓ should create session expiring in 20 minutes (6166ms)
-      ✓ should create session expiring in 8 hours (12381ms)
-      ✓ should create session expiring in 30 days (6154ms)
-      ✓ should sign in (screenshots) (8566ms)
+      ✓ should create session expiring in 20 minutes as default (5969ms)
+      ✓ should create session expiring in 20 minutes (6110ms)
+      ✓ should create session expiring in 8 hours (12180ms)
+      ✓ should create session expiring in 30 days (6093ms)
+      ✓ should sign in (screenshots) (8312ms)
     errors
-      ✓ invalid-username (5049ms)
-      ✓ invalid-password (5718ms)
+      ✓ invalid-username (4967ms)
+      ✓ invalid-password (5693ms)
 
   /account/signout-complete
     view
-      ✓ should sign out (screenshots) (1429ms)
+      ✓ should sign out (screenshots) (1342ms)
 
   /account/signout
     view
-      ✓ should end the session (629ms)
-      ✓ should redirect to signout complete page (595ms)
-      ✓ should signout (screenshots) (1408ms)
+      ✓ should end the session (594ms)
+      ✓ should redirect to signout complete page (561ms)
+      ✓ should signout (screenshots) (1345ms)
 
   /account/verify
     view
-      ✓ should present the form (498ms)
+      ✓ should present the form (474ms)
     submit
-      ✓ should mark session as verified (6001ms)
-      ✓ should verify session (screenshots) (10738ms)
+      ✓ should mark session as verified (5938ms)
+      ✓ should verify session (screenshots) (10688ms)
     errors
-      ✓ invalid-username (5089ms)
-      ✓ invalid-password (5766ms)
+      ✓ invalid-username (5066ms)
+      ✓ invalid-password (5709ms)
 
   /administrator/account-profiles
     before
@@ -704,13 +707,13 @@ setupBefore /home/runner/work/storage-cache-redis/storage-cache-redis /home/runn
 
   /administrator/account
     before
-      ✓ should bind data to req (68ms)
+      ✓ should bind data to req (69ms)
     view
-      ✓ should present the account table (screenshots) (1928ms)
-      ✓ should present the profile table (607ms)
-      ✓ should present the sessions table (613ms)
-      ✓ should hide empty reset codes table (610ms)
-      ✓ should present a populated reset codes table (589ms)
+      ✓ should present the account table (screenshots) (1811ms)
+      ✓ should present the profile table (614ms)
+      ✓ should present the sessions table (556ms)
+      ✓ should hide empty reset codes table (570ms)
+      ✓ should present a populated reset codes table (624ms)
 
   /administrator/accounts
     before
@@ -732,22 +735,22 @@ setupBefore /home/runner/work/storage-cache-redis/storage-cache-redis /home/runn
 
   /administrator/assign-administrator
     before
-      ✓ should bind data to req (54ms)
+      ✓ should bind data to req (59ms)
     view
-      ✓ should present the form (584ms)
+      ✓ should present the form (508ms)
     submit
-      ✓ should apply account update (screenshots) (3226ms)
+      ✓ should apply account update (screenshots) (3157ms)
 
   /administrator/create-reset-code
     before
-      ✓ should bind data to req (58ms)
+      ✓ should bind data to req (63ms)
     view
-      ✓ should present the form (564ms)
+      ✓ should present the form (566ms)
     submit
-      ✓ should create reset code (screenshots) (3722ms)
+      ✓ should create reset code (screenshots) (3693ms)
     errors
-      ✓ invalid-secret-code (987ms)
-      ✓ invalid-secret-code-length (2045ms)
+      ✓ invalid-secret-code (960ms)
+      ✓ invalid-secret-code-length (1924ms)
 
   /administrator/delete-account
     exceptions
@@ -755,29 +758,29 @@ setupBefore /home/runner/work/storage-cache-redis/storage-cache-redis /home/runn
     before
       ✓ should bind data to req (67ms)
     view
-      ✓ should present the form (593ms)
+      ✓ should present the form (530ms)
     submit
-      ✓ should immediately delete (screenshots) (3338ms)
+      ✓ should immediately delete (screenshots) (3316ms)
 
   /administrator/delete-schedule
     before
-      ✓ should bind data to req (83ms)
+      ✓ should bind data to req (99ms)
     view
-      ✓ should present the deleted accounts table (screenshots) (1685ms)
-      ✓ should return one page (648ms)
-      ✓ should change page size (670ms)
-      ✓ should change offset (631ms)
+      ✓ should present the deleted accounts table (screenshots) (1694ms)
+      ✓ should return one page (606ms)
+      ✓ should change page size (655ms)
+      ✓ should change offset (607ms)
 
   /administrator
     view
-      ✓ should return page (screenshots) (1258ms)
+      ✓ should return page (screenshots) (1249ms)
 
   /administrator/profile
     before
-      ✓ should bind data to req (52ms)
+      ✓ should bind data to req (56ms)
     view
-      ✓ should present the profile table (screenshots) (2400ms)
-      ✓ should show fields if data exists (4731ms)
+      ✓ should present the profile table (screenshots) (2310ms)
+      ✓ should show fields if data exists (4503ms)
 
   /administrator/profiles
     before
@@ -786,13 +789,13 @@ setupBefore /home/runner/work/storage-cache-redis/storage-cache-redis /home/runn
       ✓ should return one page (screenshots)
       ✓ should change page size
       ✓ should change offset
-      ✓ should show fields if data exists (4913ms)
+      ✓ should show fields if data exists (4579ms)
 
   /administrator/reset-code
     before
-      ✓ should bind data to req (58ms)
+      ✓ should bind data to req (63ms)
     view
-      ✓ should present the reset code table (screenshots) (1941ms)
+      ✓ should present the reset code table (screenshots) (1912ms)
 
   /administrator/reset-codes
     before
@@ -805,50 +808,50 @@ setupBefore /home/runner/work/storage-cache-redis/storage-cache-redis /home/runn
 
   /administrator/reset-session-key
     before
-      ✓ should bind data to req (49ms)
+      ✓ should bind data to req (71ms)
     view
-      ✓ should present the form (587ms)
+      ✓ should present the form (518ms)
     submit
-      ✓ should reset session key (screenshots) (3289ms)
+      ✓ should reset session key (screenshots) (3154ms)
 
   /administrator/revoke-administrator
     before
-      ✓ should bind data to req (56ms)
+      ✓ should bind data to req (58ms)
     view
-      ✓ should present the form (598ms)
+      ✓ should present the form (573ms)
     submit
-      ✓ should revoke administrator status (screenshots) (3244ms)
+      ✓ should revoke administrator status (screenshots) (3215ms)
 
   /administrator/schedule-account-delete
     before
-      ✓ should bind data to req (57ms)
+      ✓ should bind data to req (56ms)
     view
-      ✓ should present the form (567ms)
+      ✓ should present the form (544ms)
     submit
-      ✓ should schedule account for deletion (screenshots) (3379ms)
+      ✓ should schedule account for deletion (screenshots) (3254ms)
 
   /administrator/session
     before
-      ✓ should bind data to req (51ms)
+      ✓ should bind data to req (53ms)
     view
-      ✓ should present the session table (screenshots) (1880ms)
+      ✓ should present the session table (screenshots) (1828ms)
 
   /administrator/sessions
     before
       ✓ should bind data to req
     view
       ✓ should present the sessions table (screenshots)
-      ✓ should return one page (592ms)
+      ✓ should return one page (621ms)
       ✓ should change page size
       ✓ should change offset
 
   /administrator/transfer-ownership
     before
-      ✓ should bind data to req (54ms)
+      ✓ should bind data to req (53ms)
     view
-      ✓ should present the form (554ms)
+      ✓ should present the form (546ms)
     submit
-      ✓ should change ownership (screenshots) (3281ms)
+      ✓ should change ownership (screenshots) (3174ms)
 
   /api/administrator/account
     exceptions
@@ -856,15 +859,15 @@ setupBefore /home/runner/work/storage-cache-redis/storage-cache-redis /home/runn
         ✓ unspecified querystring accountid
         ✓ invalid querystring accountid
     returns
-      ✓ object (50ms)
+      ✓ object (53ms)
     redacts
-      ✓ usernameHash (60ms)
-      ✓ passwordHash (48ms)
-      ✓ sessionKey (63ms)
+      ✓ usernameHash (54ms)
+      ✓ passwordHash (65ms)
+      ✓ sessionKey (52ms)
 
   /api/administrator/accounts-count
     returns
-      ✓ integer (106ms)
+      ✓ integer (101ms)
 
   /api/administrator/accounts
     receives
@@ -904,14 +907,14 @@ setupBefore /home/runner/work/storage-cache-redis/storage-cache-redis /home/runn
         ✓ unspecified querystring accountid
         ✓ invalid querystring accountid
       invalid-secret-code
-        ✓ missing posted secret-code (47ms)
+        ✓ missing posted secret-code (57ms)
       invalid-secret-code-length
-        ✓ invalid posted secret-code length (47ms)
+        ✓ invalid posted secret-code length (50ms)
     returns
-      ✓ object (51ms)
+      ✓ object (57ms)
     configuration
-      ✓ environment MINIMUM_RESET_CODE_LENGTH (44ms)
-      ✓ environment MAXIMUM_RESET_CODE_LENGTH (47ms)
+      ✓ environment MINIMUM_RESET_CODE_LENGTH (54ms)
+      ✓ environment MAXIMUM_RESET_CODE_LENGTH (52ms)
 
   /api/administrator/delete-account
     exceptions
@@ -919,27 +922,27 @@ setupBefore /home/runner/work/storage-cache-redis/storage-cache-redis /home/runn
         ✓ missing querystring accountid
         ✓ invalid querystring accountid
     receieves
-      ✓ querystring accountid (52ms)
+      ✓ querystring accountid (59ms)
     returns
-      ✓ boolean (81ms)
+      ✓ boolean (59ms)
 
   /api/administrator/deleted-accounts-count
     returns
-      ✓ querystring accountid (98ms)
+      ✓ querystring accountid (126ms)
 
   /api/administrator/deleted-accounts
     receives
-      ✓ optional querystring offset (integer) (103ms)
-      ✓ optional querystring limit (integer) (84ms)
-      ✓ optional querystring all (boolean) (114ms)
+      ✓ optional querystring offset (integer) (112ms)
+      ✓ optional querystring limit (integer) (87ms)
+      ✓ optional querystring all (boolean) (122ms)
     returns
-      ✓ array (79ms)
+      ✓ array (116ms)
     redacts
-      ✓ usernameHash (65ms)
+      ✓ usernameHash (71ms)
       ✓ passwordHash (56ms)
-      ✓ sessionKey (60ms)
+      ✓ sessionKey (58ms)
     configuration
-      ✓ environment PAGE_SIZE (136ms)
+      ✓ environment PAGE_SIZE (146ms)
 
   /api/administrator/profile
     exceptions
@@ -947,11 +950,11 @@ setupBefore /home/runner/work/storage-cache-redis/storage-cache-redis /home/runn
         ✓ missing querystring profileid
         ✓ invalid querystring profileid
     returns
-      ✓ object (55ms)
+      ✓ object (49ms)
 
   /api/administrator/profiles-count
     returns
-      ✓ integer (96ms)
+      ✓ integer (99ms)
 
   /api/administrator/profiles
     receives
@@ -971,23 +974,23 @@ setupBefore /home/runner/work/storage-cache-redis/storage-cache-redis /home/runn
         ✓ invalid querystring accountid
       invalid-account
         ✓ accessing account is not owner (50ms)
-        ✓ querystring accountid is not administrator (45ms)
+        ✓ querystring accountid is not administrator (53ms)
     returns
       ✓ object (54ms)
 
   /api/administrator/reset-code
     exceptions
       invalid-reset-codeid
-        ✓ missing querystring codeid
+        ✓ missing querystring codeid (73ms)
         ✓ invalid querystring codeid
     returns
-      ✓ object (50ms)
+      ✓ object (55ms)
     redacts
-      ✓ secretCodeHash (50ms)
+      ✓ secretCodeHash (56ms)
 
   /api/administrator/reset-codes-count
     returns
-      ✓ integer (109ms)
+      ✓ integer (132ms)
 
   /api/administrator/reset-codes
     receives
@@ -1008,11 +1011,11 @@ setupBefore /home/runner/work/storage-cache-redis/storage-cache-redis /home/runn
         ✓ missing querystring accountid
         ✓ invalid querystring accountid
     invalid-account
-      ✓ ineligible querystring account is deleted (50ms)
+      ✓ ineligible querystring account is deleted (58ms)
     requires
-      ✓ querystring accountid is not deleted (48ms)
+      ✓ querystring accountid is not deleted (61ms)
     returns
-      ✓ object (51ms)
+      ✓ object (57ms)
 
   /api/administrator/session
     exceptions
@@ -1020,13 +1023,13 @@ setupBefore /home/runner/work/storage-cache-redis/storage-cache-redis /home/runn
         ✓ unspecified querystring accountid
         ✓ invalid querystring sessionid
     returns
-      ✓ object (44ms)
+      ✓ object (52ms)
     redacts
-      ✓ tokenHash (44ms)
+      ✓ tokenHash (54ms)
 
   /api/administrator/sessions-count
     returns
-      ✓ integer (96ms)
+      ✓ integer (99ms)
 
   /api/administrator/sessions
     receives
@@ -1051,7 +1054,7 @@ setupBefore /home/runner/work/storage-cache-redis/storage-cache-redis /home/runn
     requires
       ✓ querystring accountid is not administrator
     returns
-      ✓ object (46ms)
+      ✓ object (55ms)
 
   /api/administrator/set-account-deleted
     exceptions
@@ -1059,13 +1062,13 @@ setupBefore /home/runner/work/storage-cache-redis/storage-cache-redis /home/runn
         ✓ unspecified querystring accountid
         ✓ invalid querystring accountid
       invalid-account
-        ✓ ineligible querystring account is already deleted (47ms)
+        ✓ ineligible querystring account is already deleted (59ms)
     invalid-account
-      ✓ querystring accountid is deleted (47ms)
+      ✓ querystring accountid is deleted (58ms)
     returns
-      ✓ object (46ms)
+      ✓ object (54ms)
     configuration
-      ✓ environment DELETE_DELAY (49ms)
+      ✓ environment DELETE_DELAY (59ms)
 
   /api/administrator/set-owner-account
     exceptions
@@ -1073,14 +1076,14 @@ setupBefore /home/runner/work/storage-cache-redis/storage-cache-redis /home/runn
         ✓ missing querystring accountid
         ✓ invalid querystring accountid
       invalid-account
-        ✓ ineligible accessing account (82ms)
-        ✓ ineligible querystring account is already owner
+        ✓ ineligible accessing account (78ms)
+        ✓ ineligible querystring account is already owner (38ms)
     requires
-      ✓ accessing account is owner (70ms)
+      ✓ accessing account is owner (85ms)
       ✓ querystring account is not owner
-      ✓ querystring account is not deleted (46ms)
+      ✓ querystring account is not deleted (58ms)
     returns
-      ✓ object (51ms)
+      ✓ object (65ms)
 
   /api/user/account
     exceptions
@@ -1088,7 +1091,7 @@ setupBefore /home/runner/work/storage-cache-redis/storage-cache-redis /home/runn
         ✓ missing querystring accountid
         ✓ invalid querystring accountid
       invalid-account
-        ✓ ineligible accessing account (44ms)
+        ✓ ineligible accessing account (58ms)
     returns
       ✓ object
     redacts
@@ -1156,7 +1159,7 @@ setupBefore /home/runner/work/storage-cache-redis/storage-cache-redis /home/runn
       ✓ environment MINIMUM_PASSWORD_LENGTH
       ✓ environment MAXIMUM_PASSWORD_LENGTH
       ✓ environment REQUIRE_PROFILE
-      ✓ environment USER_PROFILE_FIELDS (93ms)
+      ✓ environment USER_PROFILE_FIELDS (134ms)
       ✓ environment MINIMUM_PROFILE_FIRST_NAME_LENGTH
       ✓ environment MAXIMUM_PROFILE_FIRST_NAME_LENGTH
       ✓ environment MINIMUM_PROFILE_LAST_NAME_LENGTH
@@ -1165,7 +1168,7 @@ setupBefore /home/runner/work/storage-cache-redis/storage-cache-redis /home/runn
       ✓ environment MAXIMUM_PROFILE_DISPLAY_NAME_LENGTH
       ✓ environment MINIMUM_PROFILE_COMPANY_NAME_LENGTH
       ✓ environment MAXIMUM_PROFILE_COMPANY_NAME_LENGTH
-      ✓ override req.userProfileFields (87ms)
+      ✓ override req.userProfileFields (105ms)
 
   /api/user/create-profile
     exceptions
@@ -1173,12 +1176,12 @@ setupBefore /home/runner/work/storage-cache-redis/storage-cache-redis /home/runn
         ✓ missing querystring accountid
         ✓ invalid querystring accountid
       invalid-accountid
-        ✓ ineligible accessing account (45ms)
+        ✓ ineligible accessing account (61ms)
       invalid-first-name
         ✓ missing posted first-name
       invalid-first-name-length
         ✓ posted first-name too short
-        ✓ posted first-name too long
+        ✓ posted first-name too long (44ms)
       invalid-last-name
         ✓ missing posted last-name
       invalid-last-name-length
@@ -1213,10 +1216,10 @@ setupBefore /home/runner/work/storage-cache-redis/storage-cache-redis /home/runn
       ✓ optionally-required posted company-name
       ✓ optionally-required posted contact-email
       ✓ optionally-required posted display-email
-      ✓ optionally-required posted location
+      ✓ optionally-required posted location (38ms)
       ✓ optionally-required posted occupation
       ✓ optionally-required posted phone
-      ✓ optionally-required posted dob
+      ✓ optionally-required posted dob (41ms)
     returns
       ✓ object
     configuration
@@ -1229,7 +1232,7 @@ setupBefore /home/runner/work/storage-cache-redis/storage-cache-redis /home/runn
       ✓ environment MAXIMUM_PROFILE_DISPLAY_NAME_LENGTH
       ✓ environment MINIMUM_PROFILE_COMPANY_NAME_LENGTH
       ✓ environment MAXIMUM_PROFILE_COMPANY_NAME_LENGTH
-      ✓ override req.userProfileFields (61ms)
+      ✓ override req.userProfileFields (66ms)
 
   /api/user/create-reset-code
     exceptions
@@ -1237,7 +1240,7 @@ setupBefore /home/runner/work/storage-cache-redis/storage-cache-redis /home/runn
         ✓ missing querystring accountid
         ✓ invalid querystring accountid
       invalid-accountid
-        ✓ ineligible accessing account (45ms)
+        ✓ ineligible accessing account (52ms)
       invalid-secret-code
         ✓ missing posted secret-code
       invalid-secret-code-length
@@ -1253,7 +1256,7 @@ setupBefore /home/runner/work/storage-cache-redis/storage-cache-redis /home/runn
       invalid-password
         ✓ missing posted password
     receives
-      ✓ optional posted remember (hours|days) (53ms)
+      ✓ optional posted remember (hours|days) (48ms)
     returns
       ✓ object
 
@@ -1265,7 +1268,7 @@ setupBefore /home/runner/work/storage-cache-redis/storage-cache-redis /home/runn
       invalid-profile
         ✓ querystring profileid is default contact profile
       invalid-account
-        ✓ ineligible querystring profileid (43ms)
+        ✓ ineligible querystring profileid (51ms)
     returns
       ✓ boolean
 
@@ -1275,9 +1278,9 @@ setupBefore /home/runner/work/storage-cache-redis/storage-cache-redis /home/runn
         ✓ missing querystring codeid
         ✓ invalid querystring codeid
       invalid-account
-        ✓ ineligible querystring codeid (49ms)
+        ✓ ineligible querystring codeid (58ms)
     returns
-      ✓ boolean (41ms)
+      ✓ boolean (44ms)
 
   /api/user/profile
     exceptions
@@ -1285,7 +1288,7 @@ setupBefore /home/runner/work/storage-cache-redis/storage-cache-redis /home/runn
         ✓ missing querystring profileid
         ✓ invalid querystring profileid
       invalid-account
-        ✓ ineligible querystring profileid (42ms)
+        ✓ ineligible querystring profileid (53ms)
     returns
       ✓ object
 
@@ -1295,9 +1298,9 @@ setupBefore /home/runner/work/storage-cache-redis/storage-cache-redis /home/runn
         ✓ missing querystring accountid
         ✓ invalid querystring accountid
       invalid-account
-        ✓ ineligible accessing account (56ms)
+        ✓ ineligible accessing account (50ms)
     returns
-      ✓ integer (38ms)
+      ✓ integer (48ms)
 
   /api/user/profiles
     exceptions
@@ -1305,7 +1308,7 @@ setupBefore /home/runner/work/storage-cache-redis/storage-cache-redis /home/runn
         ✓ missing querystring accountid
         ✓ invalid querystring accountid
       invalid-account
-        ✓ ineligible accessing account (52ms)
+        ✓ ineligible accessing account (61ms)
     receives
       ✓ optional querystring offset (integer)
       ✓ optional querystring limit (integer)
@@ -1340,7 +1343,7 @@ setupBefore /home/runner/work/storage-cache-redis/storage-cache-redis /home/runn
       invalid-reset-code
         ✓ invalid posted secret-code
     returns
-      ✓ boolean
+      ✓ boolean (41ms)
 
   /api/user/reset-code
     exceptions
@@ -1348,11 +1351,11 @@ setupBefore /home/runner/work/storage-cache-redis/storage-cache-redis /home/runn
         ✓ missing querystring codeid
         ✓ invalid querystring codeid
       invalid-account
-        ✓ ineligible querystring codeid (54ms)
+        ✓ ineligible querystring codeid (57ms)
     returns
-      ✓ object
+      ✓ object (45ms)
     redacts
-      ✓ secretCodeHash (38ms)
+      ✓ secretCodeHash
 
   /api/user/reset-codes-count
     exceptions
@@ -1360,9 +1363,9 @@ setupBefore /home/runner/work/storage-cache-redis/storage-cache-redis /home/runn
         ✓ missing querystring accountid
         ✓ invalid querystring accountid
       invalid-account
-        ✓ ineligible accessing account (43ms)
+        ✓ ineligible accessing account (51ms)
     returns
-      ✓ integer (38ms)
+      ✓ integer (48ms)
 
   /api/user/reset-codes
     exceptions
@@ -1370,7 +1373,7 @@ setupBefore /home/runner/work/storage-cache-redis/storage-cache-redis /home/runn
         ✓ missing querystring accountid
         ✓ invalid querystring accountid
       invalid-account
-        ✓ ineligible accessing account (47ms)
+        ✓ ineligible accessing account (50ms)
     receives
       ✓ optional querystring offset (integer)
       ✓ optional querystring limit (integer)
@@ -1388,7 +1391,7 @@ setupBefore /home/runner/work/storage-cache-redis/storage-cache-redis /home/runn
         ✓ missing querystring accountid
         ✓ invalid querystring accountid
       invalid-account
-        ✓ ineligible accessing account (43ms)
+        ✓ ineligible accessing account (49ms)
     returns
       ✓ boolean
 
@@ -1398,7 +1401,7 @@ setupBefore /home/runner/work/storage-cache-redis/storage-cache-redis /home/runn
         ✓ missing querystring sessionid
         ✓ invalid querystring sessionid
       invalid-account
-        ✓ ineligible querystring sessionid (43ms)
+        ✓ ineligible querystring sessionid (51ms)
     returns
       ✓ object
     redacts
@@ -1410,9 +1413,9 @@ setupBefore /home/runner/work/storage-cache-redis/storage-cache-redis /home/runn
         ✓ missing querystring accountid
         ✓ invalid querystring accountid
       invalid-account
-        ✓ ineligible accessing account (44ms)
+        ✓ ineligible accessing account (45ms)
     returns
-      ✓ integer (40ms)
+      ✓ integer (42ms)
 
   /api/user/sessions
     exceptions
@@ -1420,7 +1423,7 @@ setupBefore /home/runner/work/storage-cache-redis/storage-cache-redis /home/runn
         ✓ missing querystring accountid
         ✓ invalid querystring accountid
       invalid-account
-        ✓ ineligible accessing account (43ms)
+        ✓ ineligible accessing account (48ms)
     receives
       ✓ optional querystring offset (integer)
       ✓ optional querystring limit (integer)
@@ -1436,12 +1439,12 @@ setupBefore /home/runner/work/storage-cache-redis/storage-cache-redis /home/runn
         ✓ missing querystring accountid
         ✓ invalid querystring accountid
       invalid-account
-        ✓ ineligible accessing account (47ms)
+        ✓ ineligible accessing account (49ms)
       invalid-password
         ✓ missing posted password
         ✓ invalid posted password
     returns
-      ✓ object
+      ✓ object (38ms)
     configuration
       ✓ environment DELETE_DELAY
 
@@ -1451,7 +1454,7 @@ setupBefore /home/runner/work/storage-cache-redis/storage-cache-redis /home/runn
         ✓ missing querystring accountid
         ✓ invalid querystring accountid
       invalid-account
-        ✓ ineligible accessing account (43ms)
+        ✓ ineligible accessing account (48ms)
       invalid-language
         ✓ missing posted language
         ✓ invalid posted language
@@ -1466,7 +1469,7 @@ setupBefore /home/runner/work/storage-cache-redis/storage-cache-redis /home/runn
         ✓ missing querystring accountid
         ✓ invalid querystring accountid
       invalid-account
-        ✓ ineligible accessing account (45ms)
+        ✓ ineligible accessing account (47ms)
       invalid-password
         ✓ missing posted password
         ✓ invalid posted password
@@ -1484,7 +1487,7 @@ setupBefore /home/runner/work/storage-cache-redis/storage-cache-redis /home/runn
         ✓ missing querystring accountid
         ✓ invalid querystring accountid
       invalid-account
-        ✓ ineligible accessing account (50ms)
+        ✓ ineligible accessing account (45ms)
       invalid-profileid
         ✓ missing posted profileid
         ✓ invalid posted profileid
@@ -1497,7 +1500,7 @@ setupBefore /home/runner/work/storage-cache-redis/storage-cache-redis /home/runn
         ✓ missing querystring accountid
         ✓ invalid querystring accountid
       invalid-account
-        ✓ ineligible accessing account (44ms)
+        ✓ ineligible accessing account (53ms)
       invalid-password
         ✓ missing posted password
         ✓ invalid posted password
@@ -1517,7 +1520,7 @@ setupBefore /home/runner/work/storage-cache-redis/storage-cache-redis /home/runn
       invalid-session
         ✓ querystring sessionid is not active session
       invalid-account
-        ✓ ineligible querystring sessionid (44ms)
+        ✓ ineligible querystring sessionid (51ms)
     returns
       ✓ object
 
@@ -1527,7 +1530,7 @@ setupBefore /home/runner/work/storage-cache-redis/storage-cache-redis /home/runn
         ✓ missing querystring sessionid
         ✓ invalid querystring sessionid
       invalid-account
-        ✓ ineligible querystring sessionid (50ms)
+        ✓ ineligible querystring sessionid (46ms)
     returns
       ✓ object
 
@@ -1537,7 +1540,7 @@ setupBefore /home/runner/work/storage-cache-redis/storage-cache-redis /home/runn
         ✓ missing querystring profileid
         ✓ invalid querystring profileid
       invalid-profileid
-        ✓ ineligible querystring profileid (42ms)
+        ✓ ineligible querystring profileid (46ms)
       invalid-first-name
         ✓ missing posted first-name
       invalid-first-name-length
@@ -1574,7 +1577,7 @@ setupBefore /home/runner/work/storage-cache-redis/storage-cache-redis /home/runn
       ✓ optionally-required posted first-name
       ✓ optionally-required posted last-name
       ✓ optionally-required posted display-name
-      ✓ optionally-required posted company-name
+      ✓ optionally-required posted company-name (39ms)
       ✓ optionally-required posted contact-email
       ✓ optionally-required posted display-email
       ✓ optionally-required posted location
@@ -1584,8 +1587,8 @@ setupBefore /home/runner/work/storage-cache-redis/storage-cache-redis /home/runn
     returns
       ✓ object
     configuration
-      ✓ environment USER_PROFILE_FIELDS (57ms)
-      ✓ environment MINIMUM_PROFILE_FIRST_NAME_LENGTH (41ms)
+      ✓ environment USER_PROFILE_FIELDS (78ms)
+      ✓ environment MINIMUM_PROFILE_FIRST_NAME_LENGTH
       ✓ environment MAXIMUM_PROFILE_FIRST_NAME_LENGTH
       ✓ environment MINIMUM_PROFILE_LAST_NAME_LENGTH
       ✓ environment MAXIMUM_PROFILE_LAST_NAME_LENGTH
@@ -1593,8 +1596,8 @@ setupBefore /home/runner/work/storage-cache-redis/storage-cache-redis /home/runn
       ✓ environment MAXIMUM_PROFILE_DISPLAY_NAME_LENGTH
       ✓ environment MINIMUM_PROFILE_COMPANY_NAME_LENGTH
       ✓ environment MAXIMUM_PROFILE_COMPANY_NAME_LENGTH
-      ✓ override req.userProfileFields (47ms)
+      ✓ override req.userProfileFields (65ms)
 
 
-  886 passing (13m)
+  886 passing (12m)
 
