@@ -8,6 +8,11 @@ jobs:
     strategy:
       matrix:
         node-version: [12.x]
+    services:
+      mongodb:
+        image: mongo:3.4.23
+        ports:
+          - 27017:27017
     steps:
     - uses: actions/checkout@v2
     - uses: actions/setup-node@v1
@@ -19,7 +24,6 @@ jobs:
         number of databases: 1
     - name: Install dependencies
       run: |
-        sudo apt-get install -y mongodb
         git config --global user.name "${{ secrets.NAME }}"
         git config --global user.email "${{ secrets.EMAIL }}"
         npm version patch
