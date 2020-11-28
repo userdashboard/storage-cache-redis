@@ -45,7 +45,7 @@ jobs:
         git config --local user.email "action@github.com"
         git config --local user.name "GitHub Action"
         npm version patch
-    - name:  Set up project with Dashboard and MongoDB storage and Redis cache
+    - name:  Set up project
       run: |
         HERE=`pwd`
         mkdir /tmp/project
