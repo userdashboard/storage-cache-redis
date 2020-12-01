@@ -1,5 +1,4 @@
 # Redis Storage Cache for Dashboard
-![Test suite status](https://github.com/userdashboard/storage-cache-redis/workflows/test-and-publish/badge.svg?branch=master)
 
 Install this module to use Redis as a cache to avoid disk/database operations.
 

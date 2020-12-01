@@ -1,18 +1,27 @@
 {
-  "name": "@userdashboard/storage-cache-redis",
-  "version": "1.0.19",
-  "main": "index.js",
+  "dependencies": {
+    "redis": "^2.8.0"
+  },
   "description": "Cache storage data in Redis for your Dashboard servers",
+  "devDependencies": {
+    "@userdashboard/dashboard": ">=1"
+  },
   "engine": {
-    "node": "14.15.1",
-    "npm": "6.14.8"
+    "node": ">=14",
+    "npm": ">=6"
+  },
+  "license": "MIT",
+  "main": "index.js",
+  "name": "@userdashboard/storage-cache-redis",
+  "optionalDependencies": {
+    "@userdashboard/dashboard": ">=1"
+  },
+  "peerDependencies": {
+    "@userdashboard/dashboard": ">=1"
   },
   "repository": {
     "type": "git",
     "url": "git://github.com/userdashboard/storage-cache-node.git"
   },
-  "license": "MIT",
-  "dependencies": {
-    "redis": "^2.8.0"
-  }
+  "version": "1.0.19"
 }

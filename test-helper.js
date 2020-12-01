@@ -1,5 +1,5 @@
 /* eslint-env mocha */
-global.applicationPath = __dirname
+global.applicationPath = global.applicationPath || __dirname
 
 const cache = require('./index.js')
 
