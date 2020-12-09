@@ -1,6 +1,9 @@
 {
   "dependencies": {
     "redis": "^3.0.2"
+  },  
+  "peerDependencies": {
+    "@userdashboard/dashboard": "1.0.0 - 9999.9999.9999"
   },
   "description": "Cache storage data in Redis for your Dashboard servers",
   "engine": {
